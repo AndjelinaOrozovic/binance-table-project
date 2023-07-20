@@ -5,7 +5,7 @@ export const columnDefs = [
     {field: 'symbol'},
     {field: 'priceChange', sortable: true},
     {
-        field: 'priceChangePercent', cellStyle: (param) => {
+        field: 'priceChangePercent', cellStyle: (param: ValueFormatterParams) => {
             if (param.value < 0.0) {
                 return {color: "red"}
             } else if (param.value == 0.0) {
