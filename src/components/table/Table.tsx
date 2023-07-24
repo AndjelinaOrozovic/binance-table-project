@@ -30,13 +30,13 @@ export default function Table() {
     }
 
     return (
-        <div className="ag-theme-alpine table-div">
+        <div className="ag-theme-alpine table">
             <AgGridReact
                 rowData={data}
                 columnDefs={columnDefs}
-                rowGroupPanelShow={"always"}
-                pivotPanelShow={"always"}
-                pagination={true}
+                rowGroupPanelShow="always"
+                pivotPanelShow="always"
+                pagination
             ></AgGridReact>
         </div>
     );

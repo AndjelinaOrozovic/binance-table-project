@@ -8,9 +8,9 @@ export const columnDefs = [
     {
         field: "priceChange",
         cellClassRules: {
-            "red-data": (params: CellClassParams) => params.value < 0,
-            "orange-data": (params: CellClassParams) => params.value == 0,
-            "green-data": (params: CellClassParams) => params.value > 0,
+            negative: (params: CellClassParams) => params.value < 0,
+            neutral: (params: CellClassParams) => params.value == 0,
+            positive: (params: CellClassParams) => params.value > 0,
         } as CellClassRules,
         sortable: true,
         comparator: (valueA: number, valueB: number) => valueA - valueB,
@@ -18,9 +18,9 @@ export const columnDefs = [
     {
         field: "priceChangePercent",
         cellClassRules: {
-            "red-data": (params: CellClassParams) => params.value < 0,
-            "orange-data": (params: CellClassParams) => params.value == 0,
-            "green-data": (params: CellClassParams) => params.value > 0,
+            negative: (params: CellClassParams) => params.value < 0,
+            neutral: (params: CellClassParams) => params.value == 0,
+            positive: (params: CellClassParams) => params.value > 0,
         } as CellClassRules,
         sortable: true,
         comparator: (valueA: number, valueB: number) => valueA - valueB,

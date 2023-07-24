@@ -1,9 +1,7 @@
-import axios from "axios";
 import { CoinData } from "../interfaces/CoinData.ts";
+import { restClient } from "../api/restClient.ts";
 
-const baseUrl = "https://data.binance.com/api/v3/ticker/24hr";
-
-const fetchData = () => axios.get<CoinData[]>(baseUrl).then((res) => res.data);
+const fetchData = () => restClient.get<CoinData[]>("/ticker/24hr").then((res) => res.data);
 
 const fetchService = {
     fetchData,
