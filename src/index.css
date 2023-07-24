@@ -1,0 +1,17 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #0A0E14;
+}
+
+body,
+html {
+    font: normal normal 400 16px/24px 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
