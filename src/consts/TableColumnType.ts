@@ -1,4 +1,4 @@
-import { ValueFormatterParams } from "ag-grid-community";
+import { CellClassParams, CellClassRules } from "ag-grid-community";
 import { format } from "date-fns";
 
 export const columnDefs = [
@@ -8,19 +8,19 @@ export const columnDefs = [
     {
         field: "priceChange",
         cellClassRules: {
-            "red-data": (params: ValueFormatterParams) => params.value < 0,
-            "orange-data": (params: ValueFormatterParams) => params.value == 0,
-            "green-data": (params: ValueFormatterParams) => params.value > 0,
-        },
+            "red-data": (params: CellClassParams) => params.value < 0,
+            "orange-data": (params: CellClassParams) => params.value == 0,
+            "green-data": (params: CellClassParams) => params.value > 0,
+        } as CellClassRules,
         sortable: true,
     },
     {
         field: "priceChangePercent",
         cellClassRules: {
-            "red-data": (params: ValueFormatterParams) => params.value < 0,
-            "orange-data": (params: ValueFormatterParams) => params.value == 0,
-            " green-data": (params: ValueFormatterParams) => params.value > 0,
-        },
+            "red-data": (params: CellClassParams) => params.value < 0,
+            "orange-data": (params: CellClassParams) => params.value == 0,
+            "green-data": (params: CellClassParams) => params.value > 0,
+        } as CellClassRules,
         sortable: true,
     },
     {
