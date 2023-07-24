@@ -13,6 +13,7 @@ export const columnDefs = [
             "green-data": (params: CellClassParams) => params.value > 0,
         } as CellClassRules,
         sortable: true,
+        comparator: (valueA: number, valueB: number) => valueA - valueB,
     },
     {
         field: "priceChangePercent",
@@ -22,6 +23,7 @@ export const columnDefs = [
             "green-data": (params: CellClassParams) => params.value > 0,
         } as CellClassRules,
         sortable: true,
+        comparator: (valueA: number, valueB: number) => valueA - valueB,
     },
     {
         field: "weightedAvgPrice",
