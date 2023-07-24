@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import "./Table.css";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
-import { columnDefs } from "../../const/TableColumnType.ts";
+import { columnDefs } from "../../consts/TableColumnType.ts";
 import fetchDataService from "../../services/fetchData.service.ts";
 
 export default function Table() {
